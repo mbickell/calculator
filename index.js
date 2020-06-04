@@ -60,7 +60,7 @@ const equals = document.querySelector("#equals");
 
 console.log(operators, numbers);
 
-let values = ["", "", ""];
+let values = [0, "", 0];
 
 operators.forEach(operator => {
   if (operator.innerHTML !== "=") {
