@@ -2,5 +2,15 @@
   "name": "calculator",
   "version": "1.0.0",
   "main": "index.html",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "An example of a calculator to demo functions and DOM interaction in javascript for _nology",
+  "repository": "https://github.com/mbickell/calculator.git",
+  "author": "Matthew Bickell <matthew@nology.io>",
+  "scripts": {
+    "build": "yarn sass scss:css",
+    "watch": "yarn build --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.26.7"
+  }
 }
