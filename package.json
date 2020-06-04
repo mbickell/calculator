@@ -8,7 +8,7 @@
   "author": "Matthew Bickell <matthew@nology.io>",
   "scripts": {
     "build": "yarn sass scss:dist && cp index.html index.js dist",
-    "watch": "yarn build --watch"
+    "watch": "yarn sass scss:./ --watch"
   },
   "devDependencies": {
     "sass": "^1.26.7"
