@@ -60,7 +60,7 @@ const equals = document.querySelector("#equals");
 
 console.log(operators, numbers);
 
-let values = [0, "", 0];
+let values = ["", "", ""];
 
 operators.forEach(operator => {
   if (operator.innerHTML !== "=") {
@@ -83,7 +83,7 @@ numbers.forEach(number => {
 });
 
 equals.addEventListener("click", () => {
-  display.innerHTML = calculate(values[0], values[1], values[2]);
+  display.innerHTML = calculate(parseInt(values[0]), values[1], parseInt(values[2]));
   previous.innerHTML = values.join(" ");
-  values = [0, "", 0];
+  values = ["", "", ""];
 });
