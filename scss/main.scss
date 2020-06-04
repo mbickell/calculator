@@ -2,4 +2,44 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  header {
+    background-color: purple;
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin: 0 auto;
+
+    label {
+      margin: 10px 0 5px 0;
+    }
+
+    input {
+      margin: 0 10px;
+    }
+
+    #submit {
+      margin: 10px auto;
+      width: 30%;
+      height: 30px;
+      background-color: purple;
+      color: white;
+      border: none;
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: 20px;
+    margin: 30px;
+  }
 }
