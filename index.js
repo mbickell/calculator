@@ -85,5 +85,5 @@ numbers.forEach(number => {
 equals.addEventListener("click", () => {
   display.innerHTML = calculate(values[0], values[1], values[2]);
   previous.innerHTML = values.join(" ");
-  values = ["", "", ""];
+  values = [0, "", 0];
 });
