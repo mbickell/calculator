@@ -8,7 +8,31 @@
     <title>Calculator | _nology</title>
   </head>
   <body>
-    <h1>Calculator</h1>
-    <h2>_nology</h2>
+    <main>
+      <header>
+        <h1>Calculator</h1>
+        <h2>_nology</h2>
+      </header>
+
+      <section>
+        <form>
+          <label for="first-number">Number</label>
+          <input type="number" name="first-number" id="first-number" required />
+          <label for="operator">Operator</label>
+          <input
+            type="text"
+            pattern="[-+]{1}|[*/]{1,2}"
+            name="operator"
+            id="operator"
+            title="add: +, subtract: -, multiply: *, divide: /, power: **, squareroot: //"
+            required
+          />
+          <label for="second-number">Number</label>
+          <input type="number" name="second-number" id="second-number" />
+          <input type="submit" value="Calculate" id="submit" />
+        </form>
+        <p>Result: <span id="result">0</span></p>
+      </section>
+    </main>
   </body>
 </html>
