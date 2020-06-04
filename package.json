@@ -7,7 +7,7 @@
   "repository": "https://github.com/mbickell/calculator.git",
   "author": "Matthew Bickell <matthew@nology.io>",
   "scripts": {
-    "build": "yarn sass scss:css",
+    "build": "yarn sass scss:dist && cp index.html index.js dist",
     "watch": "yarn build --watch"
   },
   "devDependencies": {
