@@ -10,5 +10,24 @@
   <body>
     <h1>Calculator</h1>
     <h2>_nology</h2>
+
+    <section>
+      <form>
+        <label for="first-number">Number</label>
+        <input type="number" name="first-number" id="first-number" />
+        <label for="operator">Operator</label>
+        <input
+          type="text"
+          pattern="[-+]{1}|[*/]{1,2}"
+          name="operator"
+          id="operator"
+          title="add: +, subtract: -, multiply: *, divide: /, power: **, squareroot: //"
+        />
+        <label for="second-number">Number</label>
+        <input type="number" name="second-number" id="second-number" />
+        <input type="submit" value="Calculate" />
+      </form>
+      <p>Result: <span id="result">0</span></p>
+    </section>
   </body>
 </html>
