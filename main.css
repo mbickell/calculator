@@ -5,6 +5,13 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+main #initial,
+main #extension {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 main header {
   background-color: purple;
   color: whitesmoke;
@@ -35,6 +42,41 @@ main p {
   text-align: center;
   font-size: 20px;
   margin: 30px;
+}
+main #extension section {
+  margin: 0 auto;
+}
+main #extension p {
+  border: 1px solid black;
+  width: 30vw;
+  height: 30px;
+  margin: 0 auto;
+}
+main #extension #previous {
+  font-size: 12px;
+}
+main #extension button {
+  width: 50px;
+  height: 50px;
+}
+main #extension #operators {
+  width: 60vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main #extension #operators button {
+  margin: 20px 5px;
+}
+main #extension #numbers {
+  width: 150px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+main #extension #numbers #zero {
+  grid-column-start: 2;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -15,10 +15,16 @@ const calculate = (firstNumber, operator, secondNumber) => {
     case "**":
       result = firstNumber ** secondNumber;
       break;
+    case "^":
+      result = firstNumber ** secondNumber;
+      break;
     case "/":
       result = firstNumber / secondNumber;
       break;
     case "//":
+      result = Math.sqrt(firstNumber);
+      break;
+    case "√":
       result = Math.sqrt(firstNumber);
       break;
 
@@ -42,4 +48,42 @@ form.addEventListener("submit", event => {
   const result = calculate(firstNumber, operator, secondNumber);
 
   document.querySelector("#result").innerHTML = result;
+});
+
+// Using button display
+
+const display = document.querySelector("#display");
+const previous = document.querySelector("#previous");
+const operators = document.querySelectorAll("#operators button");
+const numbers = document.querySelectorAll("#numbers button");
+const equals = document.querySelector("#equals");
+
+console.log(operators, numbers);
+
+let values = ["", "", ""];
+
+operators.forEach(operator => {
+  if (operator.innerHTML !== "=") {
+    operator.addEventListener("click", event => {
+      values[1] = event.target.innerHTML;
+      previous.innerHTML = values.join(" ");
+    });
+  }
+});
+
+numbers.forEach(number => {
+  number.addEventListener("click", event => {
+    if (!values[1]) {
+      values[0] += parseInt(event.target.innerHTML);
+    } else {
+      values[2] += parseInt(event.target.innerHTML);
+    }
+    previous.innerHTML = values.join(" ");
+  });
+});
+
+equals.addEventListener("click", () => {
+  display.innerHTML = calculate(values[0], values[1], values[2]);
+  previous.innerHTML = values.join(" ");
+  values = ["", "", ""];
 });
